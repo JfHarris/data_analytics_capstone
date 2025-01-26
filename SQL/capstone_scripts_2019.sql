@@ -29,8 +29,7 @@ UPDATE divvy_trips_2019_q1
 SET day_of_week = DAYNAME(start_time);
 SELECT day_of_week FROM divvy_trips_2019_q1 LIMIT 10;
 
-SELECT day_of_week, COUNT(*) as num_of_trips
-FROM divvy_trips_2019_q1
-GROUP BY day_of_week
-ORDER BY day_of_week DESC LIMIT 1;
--- RETURNS Wednesday and num_of_trips === 58,421
+-- SELECT day_of_week, COUNT(*) as num_of_trips
+-- FROM divvy_trips_2019_q1
+-- GROUP BY day_of_week
+-- ORDER BY day_of_week DESC LIMIT 1;
