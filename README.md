@@ -42,3 +42,4 @@ divvy_trips_combined$tripduration
 divvy_trips_combined <- divvy_trips_combined %>% mutate(tripduration = end_time - start_time)
 divvy_Trips_2019_Q1$trip_id<-as.character(divvy_Trips_2019_Q1$trip_id)
 divvy_trips_combined <- full_join(divvy_Trips_2019_Q1, divvy_Trips_2020_Q1, by = "trip_id")
+l
