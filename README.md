@@ -2,7 +2,7 @@
 
 ## General Overview
 
-This is for my capstone project in the Google Data Analytics Career Certificate! I've included the csv, SQL scripts, and R scripts. This repository will be linked in my presentation to limit the appendix length while still allowing code review.
+This is for my capstone project in the Google Data Analytics Career Certificate! I've included the csv, SQL queries, and Tableau visualizations. This repository will be linked in my presentation to limit the appendix length while still allowing code review.
 
 ### SQL Files
 
@@ -10,35 +10,12 @@ I wanted to recreate a situation I might encounter in the workplace. In this sce
 
 These files are separated into a 2019, 2020, and joins files. The commands have comments explaining what I was attempting to do so you can have a look at my aggregation and cleaning process.
 
-install.packages("tidyverse")
-library(tidyverse)
-library(dplyr)
-str(divvy_Trips_2019_Q1)
-str(divvy_Trips_2020_Q1)
+### Tableau Visualizations
 
-# column_names <- c("trip_id", "start_time", "end_time", "from_station_name",
+I opted to use Tableau instead of R to make the visualizations to gain more experience with that software.
 
-                  "to_station_name", "usertype", "tripduration")
+[View Tableau Workbook here](https://public.tableau.com/views/Capstone_1_17374181033930/Sheet1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
-# colnames(divvy_trips_combined) <- column_names)
+### Google Slides Presentation
 
-# divvy_trips_combined <- data.frame(column_names)
-
-# divvy_Trips_2020_Q1 <- divvy_Trips_2020_Q1[, -which(names(divvy_Trips_2020_Q1) == "rideable_type")]
-
-# colnames(divvy_Trips_2020_Q1)[which(names(divvy_Trips_2020_Q1) == "ride_id")] <- "trip_id"
-
-# colnames(divvy_Trips_2020_Q1)[which(names(divvy_Trips_2020_Q1) == "started_at")] <- "start_time"
-
-# colnames(divvy_Trips_2020_Q1)[which(names(divvy_Trips_2020_Q1) == "ended_at")] <- "end_time"
-
-# colnames(divvy_Trips_2020_Q1)[which(names(divvy_Trips_2020_Q1) == "start_station_name")] <- "from_station_name"
-
-# colnames(divvy_Trips_2020_Q1)[which(names(divvy_Trips_2020_Q1) == "end_station_name")] <- "to_station_name"
-
-# colnames(divvy_Trips_2020_Q1)[which(names(divvy_Trips_2020_Q1) == "member_casual")] <- "usertype"
-
-divvy_trips_combined$tripduration
-divvy_trips_combined <- divvy_trips_combined %>% mutate(tripduration = end_time - start_time)
-divvy_Trips_2019_Q1$trip_id<-as.character(divvy_Trips_2019_Q1$trip_id)
-divvy_trips_combined <- full_join(divvy_Trips_2019_Q1, divvy_Trips_2020_Q1, by = "trip_id")
+[Presentation here](https://docs.google.com/presentation/d/1EZiqDFGuBE-OmRwC93gSQb4QagFnkrOSHjZcxD7hcVY/edit?usp=sharing)
